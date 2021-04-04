@@ -17,3 +17,4 @@ return - keyword(return something(int, float, dict, bool, tuple, list, str, func
 name = "Raj" # variable, name -> string type variable
 home(name) # name - parameter -> actual paramater -> argument
 # print(name)
+
