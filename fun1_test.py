@@ -1,19 +1,13 @@
-def add(n1, n2):
-    return n1 + n2
+nums = [1, 2, 3, 4, 5]
 
-def sub(n1, n2):
-    return n1 - n2
+doubles = map(lambda num: num*num, nums)
+print(list(doubles))
 
-def multiply(n1, n2):
-    return n1 * n2
+peoples = ["Raj", "Rahul", "Rai", "Monai", "Babai"]
 
-def div(n1, n2):
-    return n1 // n2
+x = list(map(lambda people:people.upper(), peoples))
+print(x)
 
-ans = add(10, 20) 
-ans += sub(ans, 10)  # ans = ans + sub(ans, 10)
-ans -= multiply(ans, 20)  # ans = ans - multiply(ans, 20)
-ans *= div(ans, 10)  # ans = ans * div(ans, 10)
+new = list(filter(lambda name: name[0] == "R", peoples))
 
-
-print(ans)
+print(new)
