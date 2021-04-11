@@ -29,21 +29,20 @@ JQYVSUTHO
 Output: No
 '''
 
-from string import ascii_uppercase as uc
+def encrypt(user_word, output):
+	alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+	result = ''
 
-alpha = {uc[i]:i for i in range(len(uc))}
-print(alpha)
+	for letter in user_word:
+		if letter in alpha:
+			curr_indx = alpha.index(letter)
+			aftr_indx = (curr_indx + 5) % 26
+			result += alpha[aftr_indx]
+	
+	if sorted(result) == sorted(output):
+		return "Yes"
+	else:
+		return "No"
 
-plain_text = input().upper()
-cypher_text = input().upper()
-text = ''
-
-for letter in plain_text:
-	ci = alpha[letter]
-	cj = (ci + 5) % 26
-	text += chr(cj + 65)
-
-if sorted(text) == sorted(cypher_text):
-	print("Yes", end='')
-else:
-	print("No", end='')
+print(encrypt("PYTHON", "TDMSUY"))
+print(encrypt("JOCPNPTEL", "JQYVSUTHO"))
