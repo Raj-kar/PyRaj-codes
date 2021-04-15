@@ -11,7 +11,7 @@ from string import ascii_lowercase, ascii_uppercase, digits, punctuation
 
 password = []
 
-password +=  [random.choice(ascii_lowercase) for _ in range(5)]
+password += [random.choice(ascii_lowercase) for _ in range(5)]
 password += [random.choice(ascii_uppercase) for _ in range(3)]
 password += [random.choice(digits) for _ in range(3)]
 password += [random.choice(punctuation) for _ in range(3)]
