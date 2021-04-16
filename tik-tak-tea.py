@@ -5,11 +5,6 @@ def display_board():
     print(board[3],'|', board[4],'|', board[5],'|')
     print(board[6],'|', board[7],'|', board[8],'|')
 
-'''
-0 | 1 | 2 |
-3 | 4 | 5 |
-6 | 7 | 8 |
-'''
 def check_horizon(val1, val2, val3, sign):
     if board[val1] == board[val2] == board[val3] == sign:
         print(f"{sign} WINS !")
@@ -76,7 +71,7 @@ def game():
         handel_move("x")
         display_board()
 
-        if count > 2:
+        if count >= 2:
             if check_win():
                 break
 
